@@ -1,0 +1,156 @@
+<html>
+
+  <head>
+  
+    <title>Alex Sasse Portfolio</title>
+    <link rel="stylesheet" type="text/css" href="styles/main.css">
+  
+  </head>
+  
+  <body>
+    <div id="left-box" class="box">  
+        <div class="nav-bar">
+        
+            <a href="index.html">
+                <div class="nav-button">
+                    Home
+                </div>
+            </a>
+            <a href="my_work.html">
+                <div class="nav-button selected">
+                    My Work
+                </div>
+            </a>
+            <a href="contact.html">
+                <div class="nav-button">
+                    Contact
+                </div>
+            </a>
+            <a href="about_me.html">
+                <div class="nav-button">
+                    About Me
+                </div>
+            </a>
+    
+    
+        </div>
+        
+        <div id="work-bar-title">
+            Work Category
+        </div>
+        
+        <div class="work-bar">
+            <div onclick="show_work_listing(this, &quot;work-listing-college&quot;)" class="nav-button selected">
+                College<br>
+                Work
+            </div>
+            <div onclick="show_work_listing(this, &quot;work-listing-paintings&quot;)" class="nav-button">
+                Paintings<br>
+                Drawings
+            </div>
+            <div onclick="show_work_listing(this, &quot;work-listing-3d-art&quot;)" class="nav-button">
+                3D Art
+            </div>
+            <div onclick="show_work_listing(this, &quot;work-listing-animations&quot;)" class="nav-button">
+                Animations
+            </div>
+             <div onclick="show_work_listing(this, &quot;work-listing-units&quot;)" class="nav-button">
+                UNITS
+            </div>
+        </div>
+    </div>
+    <div class="content">
+    <h1> Alex Sasse's Portfolio </h1>
+    <div id="right-box" class="box">
+    
+        <h2> My Work </h2>
+        
+        <div class="shown-listing" id="work-listing-college">
+            <div class="show-work-button" id="show-work1" onclick="show_work_pressed(&quot;Diagram/Janes Assignment Diagram of the Portfolio By Alex Sasse.html&quot;)">Portfolio Diagram U3</div>
+            <div class="show-work-button" id="show-work1" onclick="show_work_pressed(&quot;Storyboard/Janes Assignment Portfolio Page Designs By Alex Sasse.html&quot;)">Portfolio Page Designs U3</div>
+            <div class="show-work-button" id="show-work1" onclick="show_work_pressed(&quot;Timeline/Janes Assignment Portfolio Timeline By Alex Sasse.html&quot;)">Portfolio Timeline U3</div>
+            <div class="show-work-button" id="show-work1" onclick="show_work_pressed(&quot;TableOfAssets/Janes Assignment Tablet of Assets for Portfolio By Alex Sasse.html&quot;)">Portfolio TableOfAssets U3</div>
+        </div>
+        
+        <div class="hidden-listing" id="work-listing-paintings">
+            <div class="show-work-button" id="show-work1" onclick="show_work_pressed(&quot;work_images/asian woman_xp.png&quot;)">Asian Woman Painting</div>
+            <div class="show-work-button" id="show-work1" onclick="show_work_pressed(&quot;work_images/fire wizard.png&quot;)">Fire Wizard Painting</div>
+            <div class="show-work-button" id="show-work1" onclick="show_work_pressed(&quot;work_images/quasar.png&quot;)">Quasar Painting</div>
+            <div class="show-work-button" id="show-work1" onclick="show_work_pressed(&quot;work_images/creepy dude.png&quot;)">Creepy Dude Painting</div>
+            <div class="show-work-button" id="show-work1" onclick="show_work_pressed(&quot;work_images/lost graveyard.png&quot;)">Lost Graveyard Painting</div>
+            <div class="show-work-button" id="show-work1" onclick="show_work_pressed(&quot;work_images/wired.png&quot;)">Wired Painting</div>
+        </div>
+        
+        <div class="hidden-listing" id="work-listing-3d-art">
+            <div class="show-work-button" id="show-work1" onclick="show_work_pressed(&quot;work_images_3d/containment.png&quot;)">Containment</div>
+            <div class="show-work-button" id="show-work1" onclick="show_work_pressed(&quot;work_images_3d/doomslayer.png&quot;)">Doom Slayer</div>
+            <div class="show-work-button" id="show-work1" onclick="show_work_pressed(&quot;work_images_3d/engineer_brothers.png&quot;)">Engineer Brothers</div>
+            <div class="show-work-button" id="show-work1" onclick="show_work_pressed(&quot;work_images_3d/minisentry.png&quot;)">Mini Sentry</div>
+        </div>
+        
+        <div class="hidden-listing" id="work-listing-animations">
+            <div class="show-work-button" id="show-work1" onclick="show_work_pressed(&quot;https://www.youtube.com/embed/zf3oTheTuEk&quot;)">Camper Van Drifting Advert</div>
+            <div class="show-work-button" id="show-work1" onclick="show_work_pressed(&quot;https://www.youtube.com/embed/Vrz1D5NzwZM&quot;)">Soldiers Enexpected Encounter</div>
+            <div class="show-work-button" id="show-work1" onclick="show_work_pressed(&quot;https://www.youtube.com/embed/awzUTBrG0Cg&quot;)">The Great Morpheus</div>
+        </div>    
+        <div class="hidden-listing" id="work-listing-units">
+            <div class="show-work-button" id="show-work1" onclick="goto_page(&quot;unit3.html&quot;)">UNIT 3</div>
+            <div class="show-work-button" id="show-work1" onclick="goto_page(&quot;unit13.html&quot;)" >UNIT 13</div>
+            <div class="show-work-button" id="show-work1" onclick="goto_page(&quot;unit14.html&quot;)">UNIT 14</div>
+            <div class="show-work-button" id="show-work1" onclick="goto_page(&quot;unit15.html&quot;)">UNIT 15</div>
+        </div>
+        
+        <div id="overlay">
+            <div class="close-button" onclick="close_overlay()"> CLOSE </div>
+            <iframe id="preview" class="presentation-preview">
+                
+            </iframe>
+        </div>
+    </div>
+  </div>
+  <script>
+        function goto_page(href) {
+            window.location.href = href;
+        }
+  
+        function show_work_pressed(filename) {
+            var overlay = document.getElementById("overlay");
+            var preview = document.getElementById ("preview");
+            preview.src = filename;
+            overlay.style.display = "block";
+        }
+        
+        function show_work_listing(button, name) {
+            var new_listing = document.getElementById(name);
+            var shown_listing = document.getElementsByClassName("shown-listing")[0];
+            var selected_button = document.querySelector(".work-bar .selected");
+            console.log(selected_button);
+            shown_listing.classList.add("hidden-listing");
+            shown_listing.classList.remove("shown-listing");
+            new_listing.classList.remove("hidden-listing");
+            new_listing.classList.add("shown-listing");
+            selected_button.classList.remove("selected");
+            button.classList.add("selected");
+ 
+            var list = new_listing.querySelectorAll("*");
+            var x = 0;
+            list.forEach(function(l) {
+                x += 1;
+                l.style.display = "none";
+                setTimeout(function() {
+                    l.style.display = "block";
+                }, 50*x);
+            });
+            
+        }
+        
+        function close_overlay() {
+            var overlay = document.getElementById("overlay");
+            var preview = document.getElementById ("preview");
+            overlay.style.display = "none";
+            preview.src = "";
+        }
+  </script>
+  </body>
+  
+</html>
